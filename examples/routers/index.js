@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Button from './button'
+import Badge from './badge'
 import Menu from './menu'
 import Icon from './icon'
 import Input from './input'
@@ -16,12 +17,18 @@ import Transition from './transition'
 import Breadcrumb from './breadcrumb'
 import Tabs from './tabs'
 import Tag from './tag'
+import Affix from './affix'
+import Progress from './progress'
 import ToolTip from './tooltip'
 import Popover from './popover'
 import Popconfirm from './popconfirm'
 import Timeline from './timeline'
 import Dropdown from './dropdown'
 import Layout from './layout'
+import Avatar from './avatar'
+import Steps from './steps'
+import TimePicker from './timepicker'
+import BackTop from './back-top'
 
 Vue.use(Router)
 
@@ -96,6 +103,14 @@ let router = new Router({
       component: Tag
     },
     {
+      path: '/affix',
+      component: Affix
+    },
+    {
+      path: '/progress',
+      component: Progress
+    },
+    {
       path: '/tooltip',
       component: ToolTip
     },
@@ -114,6 +129,26 @@ let router = new Router({
     {
       path: '/dropdown',
       component: Dropdown
+    },
+    {
+      path: '/badge',
+      component: Badge
+    },
+    {
+      path: '/avatar',
+      component: Avatar
+    },
+    {
+      path: '/steps',
+      component: Steps
+    },
+    {
+      path: '/timepicker',
+      component: TimePicker
+    },
+    {
+      path: '/backtop',
+      component: BackTop
     }
   ]
 })

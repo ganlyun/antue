@@ -83,6 +83,10 @@ export default {
           title: 'Navigation',
           items: [
             {
+              title: 'Affix 固钉',
+              route: 'affix'
+            },
+            {
               title: 'Breadcrumb 面包屑',
               route: 'breadcrumb'
             },
@@ -97,6 +101,10 @@ export default {
             {
               title: 'Dropdown 下拉菜单',
               route: 'dropdown'
+            },
+            {
+              title: 'Steps 步骤条',
+              route: 'steps'
             }
           ]
         },
@@ -122,12 +130,24 @@ export default {
             {
               title: 'Switch 开关',
               route: 'switch'
+            },
+            {
+              title: 'TimePicker 时间选择框',
+              route: 'timepicker'
             }
           ]
         },
         {
           title: 'Data Display',
           items: [
+            {
+              title: 'Avatar 头像',
+              route: 'avatar'
+            },
+            {
+              title: 'Badge 徽章',
+              route: 'badge'
+            },
             {
               title: 'Card 卡片',
               route: 'card'
@@ -162,6 +182,10 @@ export default {
               route: 'message'
             },
             {
+              title: 'Progress 进度条',
+              route: 'progress'
+            },
+            {
               title: 'Popconfirm 气泡确认',
               route: 'popconfirm'
             }
@@ -173,6 +197,15 @@ export default {
             {
               title: 'Transition 输入框',
               route: 'transition'
+            }
+          ]
+        },
+        {
+          title: 'Other',
+          items: [
+            {
+              title: 'BackTop 回到顶部',
+              route: 'backtop'
             }
           ]
         }
