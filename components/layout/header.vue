@@ -1,5 +1,5 @@
 <template>
-  <div :class="`${prefixCls}-header`" :style="headerStyle">
+  <div :class="`${prefixCls}-header`">
     <slot></slot>
   </div>
 </template>
@@ -11,12 +11,6 @@ export default {
     prefixCls: {
       type: String,
       default: 'ant-layout'
-    },
-    headerStyle: {
-      type: Object,
-      default () {
-        return {}
-      }
     }
   }
 }

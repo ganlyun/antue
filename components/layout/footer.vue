@@ -1,5 +1,5 @@
 <template>
-  <div :class="`${prefixCls}-footer`" :style="footerStyle">
+  <div :class="`${prefixCls}-footer`">
     <slot></slot>
   </div>
 </template>
@@ -11,12 +11,6 @@ export default {
     prefixCls: {
       type: String,
       default: 'ant-layout'
-    },
-    footerStyle: {
-      type: Object,
-      default () {
-        return {}
-      }
     }
   }
 }
