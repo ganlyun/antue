@@ -21,6 +21,7 @@ import Popover from './popover'
 import Popconfirm from './popconfirm'
 import Timeline from './timeline'
 import Dropdown from './dropdown'
+import Layout from './layout'
 
 Vue.use(Router)
 
@@ -61,6 +62,10 @@ let router = new Router({
     {
       path: '/grid',
       component: Grid
+    },
+    {
+      path: '/layout',
+      component: Layout
     },
     {
       path: '/radio',
