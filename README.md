@@ -48,6 +48,31 @@ Auto-fix linting issues:
 pnpm lint:fix
 ```
 
+## 🧪 Testing
+
+Run tests in watch mode (development):
+
+```bash
+pnpm test
+```
+
+Run tests once (CI/CD):
+
+```bash
+pnpm test:run
+```
+
+Run tests with coverage report:
+
+```bash
+pnpm test:coverage
+```
+
+**Test Framework:** Vitest + Vue Test Utils v2
+- Fast, Vite-native test runner
+- Vue 3 component testing support
+- JSDOM environment for DOM simulation
+
 ## 🏗️ Build
 
 Build for production:
