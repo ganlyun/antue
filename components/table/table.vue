@@ -202,12 +202,12 @@
 </template>
 
 <script>
-  import Checkbox from '../checkbox/checkbox'
-  import Icon from '../icon'
-  import Pagination from '../pagination/pagination'
-  import FilterDropdown from './filter-dropdown'
+  import Checkbox from '../checkbox/checkbox.vue'
+  import Icon from '../icon/index.js'
+  import Pagination from '../pagination/pagination.vue'
+  import FilterDropdown from './filter-dropdown.vue'
   import RenderCell from './render-cell'
-  import RadioInner from './radio-inner'
+  import RadioInner from './radio-inner.vue'
   import { oneOf } from '../_util/proptype'
 
   export default {

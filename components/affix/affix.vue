@@ -9,7 +9,7 @@
 
 <script>
 import getScroll from '../_util/getScroll'
-import { throttleByAnimationFrameDecorator } from '../_util/throttleByAnimationFrame'
+import throttleByAnimationFrame from '../_util/throttleByAnimationFrame'
 
 const getTargetRect = (target) => {
   return target !== window ? target.getBoundingClientRect() : {top: 0, left: 0, bottom: 0}
@@ -88,17 +88,18 @@ export default {
     }
   },
   mounted () {
+    // Wrap handleScroll with throttle
+    this.handleScroll = throttleByAnimationFrame(this.handleScroll.bind(this))
     const target = this.target()
     target.addEventListener('scroll', this.handleScroll, false)
     target.addEventListener('resize', this.handleScroll, false)
   },
-  beforeDestroy () {
+  beforeUnmount () {
     const target = this.target()
     target.removeEventListener('scroll', this.handleScroll, false)
     target.removeEventListener('resize', this.handleScroll, false)
   },
   methods: {
-    @throttleByAnimationFrameDecorator
     handleScroll () {
       const target = this.target()
       const affix = this.affix

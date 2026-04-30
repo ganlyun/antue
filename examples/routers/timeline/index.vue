@@ -17,12 +17,12 @@
 </template>
 
 <script>
-import Container from '../../common/container'
-import CodeShow from '../../common/code-show'
-import DemoBasic from './demo/basic'
-import DemoColor from './demo/color'
-import DemoCustom from './demo/custom'
-import DemoPending from './demo/pending'
+import Container from '../../common/container.vue'
+import CodeShow from '../../common/code-show.vue'
+import DemoBasic from './demo/basic.vue'
+import DemoColor from './demo/color.vue'
+import DemoCustom from './demo/custom.vue'
+import DemoPending from './demo/pending.vue'
 
 export default {
   components: {

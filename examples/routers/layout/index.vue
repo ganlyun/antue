@@ -41,20 +41,20 @@
   </container>
 </template>
 <script>
-import Container from '../../common/container'
-import CodeShow from '../../common/code-show'
+import Container from '../../common/container.vue'
+import CodeShow from '../../common/code-show.vue'
 import ARow from '@/row'
 import ACol from '@/col'
 
 import BaseDemo from './demo/basic.vue'
-import TopDemo from './demo/top'
-import TopSide2Demo from './demo/top-side2'
-import TopSideDemo from './demo/top-side'
-import SideDemo from './demo/side'
+import TopDemo from './demo/top.vue'
+import TopSide2Demo from './demo/top-side2.vue'
+import TopSideDemo from './demo/top-side.vue'
+import SideDemo from './demo/side.vue'
 import CustomTriggerDemo from './demo/custom-trigger.vue'
-import ResponsiveDemo from './demo/responsive'
-import FixedDemo from './demo/fixed'
-import FixedSiderDemo from './demo/fixed-sider'
+import ResponsiveDemo from './demo/responsive.vue'
+import FixedDemo from './demo/fixed.vue'
+import FixedSiderDemo from './demo/fixed-sider.vue'
 
 export default {
   components: {

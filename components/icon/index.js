@@ -1,5 +1,5 @@
 import './style/index.js'
 
-import Icon from './icon'
+import Icon from './icon.vue'
 
 export default Icon

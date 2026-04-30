@@ -1,7 +1,8 @@
 
 <script>
-import PickerHeader from './header'
-import PickerCombobox from './combobox'
+import { h } from 'vue'
+import PickerHeader from './header.vue'
+import PickerCombobox from './combobox.vue'
 
 const generateOptions = (length, disabledOptions, hideDisabledOptions, step = 1) => {
   const arr = []
@@ -74,45 +75,41 @@ export default {
       if (!this.$slots.default) {
         return null
       }
-      return (
-        <div class={ `${this.prefixCls}-addon` }>
-          { this.$slots.default }
-        </div>
-      )
+      return h('div', { class: `${this.prefixCls}-addon` }, this.$slots.default())
     }
 
-    return (
-      <div class={ `${this.prefixCls}-inner` }>
-        <PickerHeader
-          prefixCls={ this.prefixCls }
-          allowEmpty={ this.allowEmpty }
-          clearText={ this.clearText }
-          format={ this.format }
-          onClear={ this.handleHeaderClick }
-          placeholder={ this.placeholder }
-          value={ this.value } />
-        <PickerCombobox
-          prefixCls={ this.prefixCls }
-          defaultOpenValue={ this.defaultOpenValue }
-          disabledHours={ this.disabledHours }
-          disabledMinutes={ this.disabledMinutes }
-          disabledSeconds={ this.disabledSeconds }
-          format={ this.format }
-          isAM={ this.isAM }
-          isShow= { this.isShow }
-          hideDisabledOptions={ this.hideDisabledOptions }
-          hourOptions={ hourOptions }
-          minuteOptions={ minuteOptions }
-          secondOptions={ secondOptions }
-          showHour={ this.showHour }
-          showMinute={ this.showMinute }
-          showSecond={ this.showSecond }
-          onChange={ this.handleChange }
-          use12Hours={ this.use12Hours }
-          value={ this.value } />
-        { addon() }
-      </div>
-    )
+    return h('div', { class: `${this.prefixCls}-inner` }, [
+      h(PickerHeader, {
+        prefixCls: this.prefixCls,
+        allowEmpty: this.allowEmpty,
+        clearText: this.clearText,
+        format: this.format,
+        onClear: this.handleHeaderClick,
+        placeholder: this.placeholder,
+        value: this.value
+      }),
+      h(PickerCombobox, {
+        prefixCls: this.prefixCls,
+        defaultOpenValue: this.defaultOpenValue,
+        disabledHours: this.disabledHours,
+        disabledMinutes: this.disabledMinutes,
+        disabledSeconds: this.disabledSeconds,
+        format: this.format,
+        isAM: this.isAM,
+        isShow: this.isShow,
+        hideDisabledOptions: this.hideDisabledOptions,
+        hourOptions: hourOptions,
+        minuteOptions: minuteOptions,
+        secondOptions: secondOptions,
+        showHour: this.showHour,
+        showMinute: this.showMinute,
+        showSecond: this.showSecond,
+        onChange: this.handleChange,
+        use12Hours: this.use12Hours,
+        value: this.value
+      }),
+      addon()
+    ])
   }
 }
 </script>

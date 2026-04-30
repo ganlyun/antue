@@ -1,4 +1,4 @@
 import './style/index.js'
-import Select from './select'
+import Select from './select.vue'
 
 export default Select

@@ -31,15 +31,15 @@
 </template>
 
 <script>
-import Container from '../../common/container'
-import CodeShow from '../../common/code-show'
+import Container from '../../common/container.vue'
+import CodeShow from '../../common/code-show.vue'
 import ARow from '@/row'
 import ACol from '@/col'
-import DemoHorizontal from './demo/horizontal'
-import DemoInline from './demo/inline'
-import DemoInlineCollapsed from './demo/inline-collapsed'
-import DemoVertical from './demo/vertical'
-import DemoCurrent from './demo/sider-current'
+import DemoHorizontal from './demo/horizontal.vue'
+import DemoInline from './demo/inline.vue'
+import DemoInlineCollapsed from './demo/inline-collapsed.vue'
+import DemoVertical from './demo/vertical.vue'
+import DemoCurrent from './demo/sider-current.vue'
 
 export default {
   components: {

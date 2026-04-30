@@ -299,7 +299,7 @@ export default {
       }
     }
   },
-  beforeDestroy () {
+  beforeUnmount () {
     if (this.form) {
       this.form.removeField(this)
     }

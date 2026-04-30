@@ -58,18 +58,18 @@
 </template>
 
 <script>
-  import Container from '../../common/container'
-  import CodeShow from '../../common/code-show'
+  import Container from '../../common/container.vue'
+  import CodeShow from '../../common/code-show.vue'
   import ARow from '@/row'
   import ACol from '@/col'
-  import ProgressLine from './demo/line'
-  import ProgressCircle from './demo/circle'
-  import LineMini from './demo/line-mini'
-  import CircleMini from './demo/circle-mini'
-  import CircleDynamic from './demo/circle-dynamic'
-  import Format from './demo/format'
-  import Dynamic from './demo/dynamic'
-  import Dashboard from './demo/dashboard'
+  import ProgressLine from './demo/line.vue'
+  import ProgressCircle from './demo/circle.vue'
+  import LineMini from './demo/line-mini.vue'
+  import CircleMini from './demo/circle-mini.vue'
+  import CircleDynamic from './demo/circle-dynamic.vue'
+  import Format from './demo/format.vue'
+  import Dynamic from './demo/dynamic.vue'
+  import Dashboard from './demo/dashboard.vue'
 
   export default {
     components: {

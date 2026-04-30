@@ -120,7 +120,7 @@ export default {
       }
     }
   },
-  beforeDestroy () {
+  beforeUnmount () {
     this.timeout && clearTimeout(this.timeout)
     this.delayTimeout && clearTimeout(this.delayTimeout)
   },

@@ -1,4 +1,5 @@
 <script>
+import { h } from 'vue'
 import Icon from '../icon'
 
 export default {
@@ -24,7 +25,7 @@ export default {
       type: String
     }
   },
-  render (h) {
+  render () {
     let text
     const textFormatter = this.format || (percentNumber => `${percentNumber}%`)
     if (this.progressStatus === 'exception') {

@@ -26,8 +26,8 @@
 
 <script>
 import { oneOf } from '../_util/proptype'
-import VCircle from './circle'
-import ProgressInfo from './progress-info'
+import VCircle from './circle.vue'
+import ProgressInfo from './progress-info.vue'
 
 export default {
   components: {

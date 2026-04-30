@@ -1,6 +1,6 @@
 import './style/index.js'
-import Row from './row'
-import Col from './col'
+import Row from './row.vue'
+import Col from './col.vue'
 
 export {
   Row,

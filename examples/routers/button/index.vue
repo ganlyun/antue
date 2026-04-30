@@ -47,17 +47,17 @@
 </template>
 
 <script>
-import Container from '../../common/container'
-import CodeShow from '../../common/code-show'
+import Container from '../../common/container.vue'
+import CodeShow from '../../common/code-show.vue'
 import ARow from '@/row'
 import ACol from '@/col'
-import DemoBase from './demo/base'
-import IconBase from './demo/icon'
-import ButtonGroup from './demo/button-group'
-import ButtonDisabled from './demo/disabled'
-import ButtonGhost from './demo/ghost'
-import ButtonSize from './demo/size'
-import ButtonLoading from './demo/loading'
+import DemoBase from './demo/base.vue'
+import IconBase from './demo/icon.vue'
+import ButtonGroup from './demo/button-group.vue'
+import ButtonDisabled from './demo/disabled.vue'
+import ButtonGhost from './demo/ghost.vue'
+import ButtonSize from './demo/size.vue'
+import ButtonLoading from './demo/loading.vue'
 
 export default {
   components: {

@@ -63,7 +63,7 @@
 
 <script>
   import Icon from '../icon'
-  import TreeNode from './tree-node'
+  import TreeNode from './tree-node.vue'
   import { oneOf } from '../_util/proptype'
 
   const clickoutside = {

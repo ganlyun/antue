@@ -56,7 +56,7 @@ export default {
     this.scrollEvent = getTarget().addEventListener('scroll', this.handleScroll)
     this.handleScroll()
   },
-  destroyed () {
+  unmounted () {
     if (this.scrollEvent) {
       this.scrollEvent.remove()
     }

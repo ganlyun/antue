@@ -1,6 +1,7 @@
 
 
 <script>
+import { h } from 'vue'
 import Vue from 'vue'
 import AtuTransition from '../transition'
 import Popper from '../_mixin/popper'
@@ -96,7 +97,7 @@ export default {
       }
     }).$mount()
   },
-  render (h) {
+  render () {
     this.popperVM.vnode = h('atu-transition', {
       props: {
         type: 'slide',

@@ -22,7 +22,7 @@
 
 <script>
 import Star from './star.vue'
-import Icon from '../icon/index'
+import Icon from '../icon/index.js'
 import { getOffsetLeft } from '../_util/util'
 export default {
   props: {

@@ -29,17 +29,17 @@
 </template>
 
 <script>
-  import Container from '../../common/container'
-  import CodeShow from '../../common/code-show'
+  import Container from '../../common/container.vue'
+  import CodeShow from '../../common/code-show.vue'
   import ARow from '@/row'
   import ACol from '@/col'
-  import BaseDemo from './demo/base'
-  import MoreDemo from './demo/more'
-  import PageSizeDemo from './demo/pagesize'
-  import JumpDemo from './demo/jump'
-  import ControlledDemo from './demo/controlled'
-  import CustomDemo from './demo/custom'
-  import showTotalDemo from './demo/showTotal'
+  import BaseDemo from './demo/base.vue'
+  import MoreDemo from './demo/more.vue'
+  import PageSizeDemo from './demo/pagesize.vue'
+  import JumpDemo from './demo/jump.vue'
+  import ControlledDemo from './demo/controlled.vue'
+  import CustomDemo from './demo/custom.vue'
+  import showTotalDemo from './demo/showTotal.vue'
 
   export default {
     components: {

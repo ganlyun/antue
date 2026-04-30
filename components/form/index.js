@@ -1,6 +1,6 @@
 import './style/index.js'
-import Form from './form'
-import FormItem from './form-item'
+import Form from './form.vue'
+import FormItem from './form-item.vue'
 
 Form.Item = FormItem
 export default Form

@@ -23,13 +23,13 @@
 </template>
 
 <script>
-  import Container from '../../common/container'
-  import CodeShow from '../../common/code-show'
+  import Container from '../../common/container.vue'
+  import CodeShow from '../../common/code-show.vue'
   import ARow from '@/row'
   import ACol from '@/col'
-  import BaseDemo from './demo/base'
-  import OnChangeDemo from './demo/on-change'
-  import TargetDemo from './demo/target'
+  import BaseDemo from './demo/base.vue'
+  import OnChangeDemo from './demo/on-change.vue'
+  import TargetDemo from './demo/target.vue'
 
   export default {
     components: {

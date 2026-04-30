@@ -43,16 +43,16 @@
 </template>
 
 <script>
-  import Container from '../../common/container'
-  import CodeShow from '../../common/code-show'
+  import Container from '../../common/container.vue'
+  import CodeShow from '../../common/code-show.vue'
   import ARow from '@/row'
   import ACol from '@/col'
-  import DemoBase from './demo/base'
-  import CheckboxDisabled from './demo/disabled'
-  import ControllerCheckbox from './demo/controller'
-  import CheckboxGroup from './demo/group'
-  import CheckAll from './demo/check-all'
-  import CheckLayout from './demo/layout'
+  import DemoBase from './demo/base.vue'
+  import CheckboxDisabled from './demo/disabled.vue'
+  import ControllerCheckbox from './demo/controller.vue'
+  import CheckboxGroup from './demo/group.vue'
+  import CheckAll from './demo/check-all.vue'
+  import CheckLayout from './demo/layout.vue'
 
   export default {
     components: {

@@ -1,6 +1,6 @@
 import './style/index.js'
-import Button from './button'
-import ButtonGroup from './button-group'
+import Button from './button.vue'
+import ButtonGroup from './button-group.vue'
 
 Button.Group = ButtonGroup
 export default Button

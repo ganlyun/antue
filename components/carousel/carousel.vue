@@ -143,7 +143,7 @@ export default {
   mounted () {
     this.startAutoplay()
   },
-  beforeDestroy () {
+  beforeUnmount () {
     this.stopAutoplay()
   }
 }

@@ -1,9 +1,9 @@
 import './style'
-import Layout from './layout'
-import Sider from './sider'
-import Header from './header'
-import Content from './content'
-import Footer from './footer'
+import Layout from './layout.vue'
+import Sider from './sider.vue'
+import Header from './header.vue'
+import Content from './content.vue'
+import Footer from './footer.vue'
 
 Layout.Sider = Sider
 Layout.Header = Header

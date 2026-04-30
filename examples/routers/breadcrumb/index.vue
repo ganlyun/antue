@@ -26,13 +26,13 @@
 </template>
 
 <script>
-  import Container from '../../common/container'
-  import CodeShow from '../../common/code-show'
+  import Container from '../../common/container.vue'
+  import CodeShow from '../../common/code-show.vue'
   import ARow from '@/row'
   import ACol from '@/col'
-  import BaseDemo from './demo/base'
-  import IconDemo from './demo/icon'
-  import SeparatorDemo from './demo/separator'
+  import BaseDemo from './demo/base.vue'
+  import IconDemo from './demo/icon.vue'
+  import SeparatorDemo from './demo/separator.vue'
   export default {
     components: {
       Container,

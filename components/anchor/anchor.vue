@@ -100,7 +100,7 @@
       }
       window.addEventListener('scroll', this.handleScroll)
     },
-    beforeDestroy () {
+    beforeUnmount () {
       window.removeEventListener('scroll', this.handleScroll)
     }
   }

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Container from '../../common/container'
+import Container from '../../common/container.vue'
 import AntIcon from '@/icon'
 export default {
   components: {

@@ -1,4 +1,4 @@
 import './style/index.js'
-import DatePicker from './date-picker'
+import DatePicker from './date-picker.vue'
 
 export default DatePicker

@@ -1,4 +1,4 @@
 import './style/index.js'
-import Transfer from './transfer'
+import Transfer from './transfer.vue'
 
 export default Transfer

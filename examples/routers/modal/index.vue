@@ -26,13 +26,13 @@
 </template>
 
 <script>
-  import Container from '../../common/container'
-  import CodeShow from '../../common/code-show'
+  import Container from '../../common/container.vue'
+  import CodeShow from '../../common/code-show.vue'
   import ARow from '@/row'
   import ACol from '@/col'
-  import DemoBasic from './demo/basic'
-  import DemoFooter from './demo/footer'
-  import DemoCentered from './demo/centered'
+  import DemoBasic from './demo/basic.vue'
+  import DemoFooter from './demo/footer.vue'
+  import DemoCentered from './demo/centered.vue'
 
   export default {
     components: {

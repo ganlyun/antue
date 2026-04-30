@@ -14,7 +14,7 @@
 </template>
 
 <script>
-  import Checkbox from './checkbox'
+  import Checkbox from './checkbox.vue'
 
   export default {
     name: 'checkboxGroup',

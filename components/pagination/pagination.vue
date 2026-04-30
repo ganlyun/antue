@@ -66,7 +66,7 @@
 
 <script>
   import locale from './locale/zh_CN'
-  import PageOption from './option'
+  import PageOption from './option.vue'
   import { oneOf } from '../_util/proptype'
 
   export default {

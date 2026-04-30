@@ -1,4 +1,5 @@
 <script>
+import { h } from 'vue'
   import { oneOf } from '../_util/proptype'
 
   const SIZEMAP = {
@@ -83,29 +84,25 @@
         return this.suffix || this.$slots.suffix !== undefined
       }
     },
-    render (h) {
+    render () {
       const basicInput = h('input', {
-        attrs: {
-          type: this.type,
-          value: this.value,
-          placeholder: this.placeholder,
-          readonly: this.readonly,
-          name: this.name,
-          number: this.number,
-          autofocus: this.autofocus,
-          disabled: this.disabled,
-          id: this.id,
-          autocomplete: this.autocomplete
-        },
-        'class': this.inputClass,
-        on: {
-          blur: this.handleBlur,
-          change: this.handleChange,
-          click: this.handleClick,
-          focus: this.handleFocus,
-          input: this.updateValue,
-          keypress: this.handleKeyDown
-        }
+        type: this.type,
+        value: this.value,
+        placeholder: this.placeholder,
+        readonly: this.readonly,
+        name: this.name,
+        number: this.number,
+        autofocus: this.autofocus,
+        disabled: this.disabled,
+        id: this.id,
+        autocomplete: this.autocomplete,
+        class: this.inputClass,
+        onBlur: this.handleBlur,
+        onChange: this.handleChange,
+        onClick: this.handleClick,
+        onFocus: this.handleFocus,
+        onInput: this.updateValue,
+        onKeypress: this.handleKeyDown
       })
 
       const renderLabeledInput = (children) => {

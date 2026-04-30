@@ -1,5 +1,6 @@
 <script>
-  import AtuInput from './input'
+import { h } from 'vue'
+  import AtuInput from './input.vue'
   import AtuIcon from '../icon'
 
   export default {
@@ -52,27 +53,20 @@
       },
       value: null
     },
-    render (h) {
+    render () {
       const searchIcon = h(AtuIcon, {
-        props: {
-          type: 'search'
-        },
-        'class': 'ant-input-search-icon',
-        slot: 'suffix',
-        nativeOn: {
-          click: () => {
-            this.$emit('search', this.value)
-          }
+        type: 'search',
+        class: 'ant-input-search-icon',
+        onClick: () => {
+          this.$emit('search', this.value)
         }
       })
       return h(AtuInput, {
-        props: this.$props,
-        'class': 'ant-input-search',
-        on: {
-          input: (value) => this.$emit('input', value),
-          'press-enter': () => this.$emit('search', this.value)
-        }
-      }, [searchIcon])
+        ...this.$props,
+        class: 'ant-input-search',
+        onInput: (value) => this.$emit('input', value),
+        onPressEnter: () => this.$emit('search', this.value)
+      }, () => [searchIcon])
     }
   }
 </script>

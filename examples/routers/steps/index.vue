@@ -29,16 +29,16 @@
 </template>
 
 <script>
-import Container from '../../common/container'
-import CodeShow from '../../common/code-show'
-import DemoBasic from './demo/basic'
-import DemoSmallSize from './demo/small-size'
-import DemoIcon from './demo/icon'
-import DemoNextStep from './demo/next-step'
-import DemoVertical from './demo/vertical'
-import DemoVerticalSmall from './demo/vertical-small'
-import DemoError from './demo/error'
-import DemoProgressDot from './demo/progress-dot'
+import Container from '../../common/container.vue'
+import CodeShow from '../../common/code-show.vue'
+import DemoBasic from './demo/basic.vue'
+import DemoSmallSize from './demo/small-size.vue'
+import DemoIcon from './demo/icon.vue'
+import DemoNextStep from './demo/next-step.vue'
+import DemoVertical from './demo/vertical.vue'
+import DemoVerticalSmall from './demo/vertical-small.vue'
+import DemoError from './demo/error.vue'
+import DemoProgressDot from './demo/progress-dot.vue'
 
 export default {
   components: {

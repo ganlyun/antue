@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import Container from '../../common/container'
-import CodeShow from '../../common/code-show'
-import DemoNormal from './demo/normal'
+import Container from '../../common/container.vue'
+import CodeShow from '../../common/code-show.vue'
+import DemoNormal from './demo/normal.vue'
 
 export default {
   components: {

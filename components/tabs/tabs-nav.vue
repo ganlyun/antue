@@ -1,6 +1,7 @@
 <script>
-import TabsInk from './tabs-ink'
-import TabsTab from './tabs-tab'
+import { h } from 'vue'
+import TabsInk from './tabs-ink.vue'
+import TabsTab from './tabs-tab.vue'
 import debounce from 'lodash.debounce'
 
 export default {
@@ -160,104 +161,90 @@ export default {
     this.setInk()
     this.shouldScroll && this.scrollToActive()
   },
-  render (h) {
+  render () {
     const prefixCls = this.prefixCls
 
     const prev = h('span', {
-      attrs: {
-        unselectable: 'unselectable'
-      },
-      'class': [
+      unselectable: 'unselectable',
+      class: [
         `${prefixCls}-tab-prev`,
         {
           [`${prefixCls}-tab-btn-disabled`]: !this.prev,
           [`${prefixCls}-tab-arrow-show`]: this.showNextPrev
         }
       ],
-      on: {
-        click: this.handlePrev
-      },
+      onClick: this.handlePrev,
       ref: 'prev'
-    }, [
+    }, () => [
       h('span', {
-        'class': [
+        class: [
           `${prefixCls}-tab-prev-icon`
         ]
       })
     ])
 
     const next = h('span', {
-      attrs: {
-        unselectable: 'unselectable'
-      },
-      'class': [
+      unselectable: 'unselectable',
+      class: [
         `${prefixCls}-tab-next`,
         {
           [`${prefixCls}-tab-btn-disabled`]: !this.next,
           [`${prefixCls}-tab-arrow-show`]: this.showNextPrev
         }
       ],
-      on: {
-        click: this.handleNext
-      }
-    }, [
+      onClick: this.handleNext
+    }, () => [
       h('span', {
-        'class': [
+        class: [
           `${prefixCls}-tab-next-icon`
         ]
       })
     ])
 
     const ink = h('tabs-ink', {
-      props: {
-        animated: this.animated,
-        size: this.inkSize,
-        offset: this.inkOffset,
-        vertical: this.isVertical
-      }
+      animated: this.animated,
+      size: this.inkSize,
+      offset: this.inkOffset,
+      vertical: this.isVertical
     })
 
     const tabs = this.tabs.map(item => h('tabs-tab', {
-      props: {
-        closable: item.closable,
-        disabled: item.disabled,
-        index: item.index,
-        icon: item.icon,
-        tab: item.tab,
-        type: this.type
-      },
-      on: {
-        change: this.handleTabChange
-      },
+      closable: item.closable,
+      disabled: item.disabled,
+      index: item.index,
+      icon: item.icon,
+      tab: item.tab,
+      type: this.type,
+      onChange: this.handleTabChange,
       key: item.index,
       ref: item.index === this.tabsRoot.active ? 'active' : ''
     }))
 
     const nav = h('div', {
-      'class': `${prefixCls}-nav-scroll`
-    }, [
+      class: `${prefixCls}-nav-scroll`
+    }, () => [
       h('div', {
-        'class': [
+        class: [
           `${prefixCls}-nav`
         ],
         style: this.style,
         ref: 'nav'
-      }, [
+      }, () => [
         ink,
         tabs
       ])
     ])
 
     const warp = h('div', {
-      'class': `${prefixCls}-nav-wrap`,
+      class: `${prefixCls}-nav-wrap`,
       ref: 'wrap'
-    }, [
+    }, () => [
       nav
     ])
 
     return h('div', {
-      'class': this.classes
-    }, [
+      class: this.classes
+    }, () => [
       prev,
       next,
       warp

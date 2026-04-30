@@ -147,7 +147,7 @@ export default {
       window.addEventListener('resize', this.windowResizeEvent)
     }
   },
-  destroyed () {
+  unmounted () {
     if (this.breakpoint) {
       window.removeEventListener('resize', this.windowResizeEvent)
     }

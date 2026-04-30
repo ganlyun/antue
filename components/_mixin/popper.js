@@ -1,4 +1,4 @@
-import PopperJS from 'popper.js'
+import * as PopperJS from '@popperjs/core'
 
 /**
  * 实际使用的位置和popper.js的位置映射表

@@ -92,7 +92,7 @@
 </template>
 
 <script>
-  import Icon from '../icon'
+  import Icon from '../icon/index.js'
   import Checkbox from '../checkbox/checkbox.vue'
 
   export default {

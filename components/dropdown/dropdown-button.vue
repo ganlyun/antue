@@ -23,7 +23,7 @@
 import { oneOf } from '../_util/proptype'
 import AtuIcon from '../icon'
 import AtuButton from '../button'
-import AtuDropdown from './dropdown'
+import AtuDropdown from './dropdown.vue'
 
 const AtuButtonGroup = AtuButton.Group
 

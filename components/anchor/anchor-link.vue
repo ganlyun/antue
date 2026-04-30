@@ -46,7 +46,7 @@
     mounted () {
       this.anchor.addLink(this.href)
     },
-    beforeDestroy () {
+    beforeUnmount () {
       this.anchor.removeLink(this.href)
     }
   }

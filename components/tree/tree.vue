@@ -21,7 +21,7 @@
 </template>
 
 <script>
-  import TreeNode from './tree-node'
+  import TreeNode from './tree-node.vue'
 
   const getAllKeys = (nodes) => {
     let keys = []

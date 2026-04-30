@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import { h } from 'vue'
 
 import Popper from './popper'
 import AtuTransition from '../transition'
@@ -29,42 +29,39 @@ export default {
   },
   data () {
     return {
-      visibleArrow: true
+      visibleArrow: true,
+      popperVM: null
     }
   },
   beforeCreate () {
-    this.popperVM = new Vue({
-      data: { vnode: '' },
-      render () {
-        return this.vnode
-      }
-    }).$mount()
+    // Vue 3 migration: Use a simple object instead of new Vue()
+    this.popperVM = {
+      vnode: null,
+      $el: null
+    }
   },
-  render (h) {
-    this.popperVM.vnode = h('atu-transition', {
-      props: {
-        type: 'zoom',
-        motion: 'big-fast'
-      }
+  render () {
+    // Vue 3: Use style display instead of v-show directive
+    const transitionVNode = h(AtuTransition, {
+      type: 'zoom',
+      motion: 'big-fast'
     }, [
       h('div', {
-        'class': this.popperCls,
-        directives: [
-          {
-            name: 'show',
-            value: this.visible,
-            expression: 'show'
-          }
-        ],
-        ref: 'popper'
+        class: this.popperCls,
+        ref: 'popper',
+        style: { display: this.visible ? '' : 'none' }
       }, [
         h('div', {
-          'class': [`${this.prefixCls}-content`]
+          class: [`${this.prefixCls}-content`]
         }, [
           h('atu-tooltip-content', this)
         ])
       ])
     ])
+    
+    // Store the vnode for manual DOM manipulation if needed
+    this.popperVM.vnode = transitionVNode
+    
     if (!this.$slots.default || !this.$slots.default.length) return this.$slots.default
     return this.$slots.default[0]
   },

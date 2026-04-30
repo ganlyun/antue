@@ -34,18 +34,18 @@
 </template>
 
 <script>
-import Container from '../../common/container'
-import CodeShow from '../../common/code-show'
-import DemoBasic from './demo/basic'
-import DemoDisabled from './demo/disabled'
-import DemoIcon from './demo/icon'
-import DemoSlide from './demo/slide'
-import DemoExtra from './demo/extra'
-import DemoSize from './demo/size'
-import DemoPosition from './demo/position'
-import DemoCard from './demo/card'
-import DemoEditableCard from './demo/editable-card'
-import DemoCustomAdd from './demo/custom-add'
+import Container from '../../common/container.vue'
+import CodeShow from '../../common/code-show.vue'
+import DemoBasic from './demo/basic.vue'
+import DemoDisabled from './demo/disabled.vue'
+import DemoIcon from './demo/icon.vue'
+import DemoSlide from './demo/slide.vue'
+import DemoExtra from './demo/extra.vue'
+import DemoSize from './demo/size.vue'
+import DemoPosition from './demo/position.vue'
+import DemoCard from './demo/card.vue'
+import DemoEditableCard from './demo/editable-card.vue'
+import DemoCustomAdd from './demo/custom-add.vue'
 
 export default {
   data () {

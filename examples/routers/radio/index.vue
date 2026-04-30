@@ -38,16 +38,16 @@
 </template>
 
 <script>
-  import Container from '../../common/container'
-  import CodeShow from '../../common/code-show'
+  import Container from '../../common/container.vue'
+  import CodeShow from '../../common/code-show.vue'
   import ARow from '@/row'
   import ACol from '@/col'
-  import BaseDemo from './demo/base'
-  import DisabledDemo from './demo/disable'
-  import GroupDemo from './demo/group'
-  import GroupOptionsDemo from './demo/group-options'
-  import GroupWithNameDemo from './demo/group-with-name'
-  import GroupMoreDemo from './demo/group-more'
+  import BaseDemo from './demo/base.vue'
+  import DisabledDemo from './demo/disable.vue'
+  import GroupDemo from './demo/group.vue'
+  import GroupOptionsDemo from './demo/group-options.vue'
+  import GroupWithNameDemo from './demo/group-with-name.vue'
+  import GroupMoreDemo from './demo/group-more.vue'
   import GroupButtonDemo from './demo/group-button.vue'
   import GroupSizeButtonDemo from './demo/group-button-size.vue'
 

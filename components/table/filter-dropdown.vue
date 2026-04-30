@@ -30,8 +30,8 @@
 </template>
 
 <script>
-  import Checkbox from '../checkbox/checkbox'
-  import Icon from '../icon'
+  import Checkbox from '../checkbox/checkbox.vue'
+  import Icon from '../icon/index.js'
 
   export default {
     name: 'filter-dropdown',
@@ -111,7 +111,7 @@
       }
       document.addEventListener('click', this._handleDocumentClick)
     },
-    beforeDestroy () {
+    beforeUnmount () {
       document.removeEventListener('click', this._handleDocumentClick)
     },
     components: {

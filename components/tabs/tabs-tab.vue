@@ -1,4 +1,5 @@
 <script>
+import { h } from 'vue'
 import AtuIcon from '../icon'
 
 export default {
@@ -64,35 +65,25 @@ export default {
       e.stopPropagation()
     }
   },
-  render (h) {
+  render () {
     const icon = this.icon
       ? h('atu-icon', {
-        props: {
-          type: this.icon
-        }
+        type: this.icon
       }) : null
 
     const close = this.type === 'editable-card' && this.closable
       ? h('atu-icon', {
-        props: {
-          type: 'close'
-        },
-        nativeOn: {
-          click: this.handleClose
-        }
+        type: 'close',
+        onClick: this.handleClose
       }) : null
 
     return h('div', {
-      'class': this.classes,
-      attr: {
-        role: 'tab',
-        'aria-disabled': this.disabled + '',
-        'aria-selected': this.active + ''
-      },
-      on: {
-        click: this.handleClick
-      }
-    }, [
+      class: this.classes,
+      role: 'tab',
+      'aria-disabled': this.disabled + '',
+      'aria-selected': this.active + '',
+      onClick: this.handleClick
+    }, () => [
       icon,
       this.tab,
       close

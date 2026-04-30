@@ -20,12 +20,12 @@
 </template>
 
 <script>
-  import Container from '../../common/container'
-  import CodeShow from '../../common/code-show'
+  import Container from '../../common/container.vue'
+  import CodeShow from '../../common/code-show.vue'
   import ARow from '@/row'
   import ACol from '@/col'
-  import BaseDemo from './demo/basic'
-  import CustomDemo from './demo/custom'
+  import BaseDemo from './demo/basic.vue'
+  import CustomDemo from './demo/custom.vue'
 
   export default {
     components: {

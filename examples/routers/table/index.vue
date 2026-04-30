@@ -53,17 +53,17 @@
 </template>
 
 <script>
-  import Container from '../../common/container'
-  import CodeShow from '../../common/code-show'
+  import Container from '../../common/container.vue'
+  import CodeShow from '../../common/code-show.vue'
   import ARow from '@/row'
   import ACol from '@/col'
-  import BaseDemo from './demo/base'
-  import BorderedDemo from './demo/bordered'
-  import SelectionDemo from './demo/selection'
-  import SortDemo from './demo/sort'
-  import FilterDemo from './demo/filter'
-  import SizeDemo from './demo/size'
-  import CustomRenderDemo from './demo/custom-render'
+  import BaseDemo from './demo/base.vue'
+  import BorderedDemo from './demo/bordered.vue'
+  import SelectionDemo from './demo/selection.vue'
+  import SortDemo from './demo/sort.vue'
+  import FilterDemo from './demo/filter.vue'
+  import SizeDemo from './demo/size.vue'
+  import CustomRenderDemo from './demo/custom-render.vue'
 
   export default {
     components: {

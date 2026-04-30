@@ -32,14 +32,14 @@
 </template>
 
 <script>
-import Container from '../../common/container'
-import CodeShow from '../../common/code-show'
+import Container from '../../common/container.vue'
+import CodeShow from '../../common/code-show.vue'
 import ARow from '@/row'
 import ACol from '@/col'
-import DemoInfo from './demo/info'
-import DemoOther from './demo/other'
-import DemoDuration from './demo/duration'
-import DemoLoading from './demo/loading'
+import DemoInfo from './demo/info.vue'
+import DemoOther from './demo/other.vue'
+import DemoDuration from './demo/duration.vue'
+import DemoLoading from './demo/loading.vue'
 
 export default {
   components: {

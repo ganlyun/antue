@@ -1,5 +1,6 @@
 <script>
-import PickerSelect from './select'
+import { h } from 'vue'
+import PickerSelect from './select.vue'
 
 const formatOption = (option, disabledOptions) => {
   const value = option < 10 ? `0${option}` : `${option}`
@@ -83,15 +84,14 @@ export default {
       const options = hourOptionsAdj.map(el => formatOption(el, disabledOptions))
       const selectedIndex = hourOptionsAdj.indexOf(hourAdj)
 
-      return (
-        <PickerSelect
-          isShow={ this.isShow }
-          prefixCls={ this.prefixCls }
-          options={ options }
-          selectedIndex={ selectedIndex }
-          onSelected={ this.handleSelected }
-          type="hour" />
-      )
+      return h(PickerSelect, {
+        isShow: this.isShow,
+        prefixCls: this.prefixCls,
+        options: options,
+        selectedIndex: selectedIndex,
+        onSelected: this.handleSelected,
+        type: 'hour'
+      })
     }
 
     const getMinuteSelect = minute => {
@@ -102,16 +102,14 @@ export default {
       const options = this.minuteOptions.map(option => formatOption(option, disabledOptions))
       const selectedIndex = this.minuteOptions.indexOf(minute)
 
-      return (
-        <PickerSelect
-          isShow={ this.isShow }
-          prefixCls={ this.prefixCls }
-          options={ options }
-          selectedIndex={ selectedIndex }
-          type="minute"
-          onSelected={ this.handleSelected }
-        />
-      )
+      return h(PickerSelect, {
+        isShow: this.isShow,
+        prefixCls: this.prefixCls,
+        options: options,
+        selectedIndex: selectedIndex,
+        type: 'minute',
+        onSelected: this.handleSelected
+      })
     }
 
     const getSecondSelect = second => {
@@ -122,16 +120,14 @@ export default {
       const options = this.secondOptions.map(option => formatOption(option, disabledOptions))
       const selectedIndex = this.secondOptions.indexOf(second)
 
-      return (
-        <PickerSelect
-          isShow={ this.isShow }
-          prefixCls={ this.prefixCls }
-          options={ options }
-          selectedIndex={ selectedIndex }
-          type="second"
-          onSelected={ this.handleSelected }
-        />
-      )
+      return h(PickerSelect, {
+        isShow: this.isShow,
+        prefixCls: this.prefixCls,
+        options: options,
+        selectedIndex: selectedIndex,
+        type: 'second',
+        onSelected: this.handleSelected
+      })
     }
 
     const getAMPMSelect = () => {
@@ -144,26 +140,22 @@ export default {
 
       const selectedIndex = this.isAM ? 0 : 1
 
-      return (
-        <PickerSelect
-          isShow={ this.isShow }
-          prefixCls={ this.prefixCls }
-          options={ AMPMOptions }
-          selectedIndex={ selectedIndex }
-          type="ampm"
-          onSelected={ this.handleSelected }
-        />
-      )
+      return h(PickerSelect, {
+        isShow: this.isShow,
+        prefixCls: this.prefixCls,
+        options: AMPMOptions,
+        selectedIndex: selectedIndex,
+        type: 'ampm',
+        onSelected: this.handleSelected
+      })
     }
 
-    return (
-      <div class={ `${this.prefixCls}-combobox` }>
-        { getHourSelect(value.hour()) }
-        { getMinuteSelect(value.minute()) }
-        { getSecondSelect(value.second()) }
-        { getAMPMSelect() }
-      </div>
-    )
+    return h('div', { class: `${this.prefixCls}-combobox` }, [
+      getHourSelect(value.hour()),
+      getMinuteSelect(value.minute()),
+      getSecondSelect(value.second()),
+      getAMPMSelect()
+    ])
   }
 }
 </script>

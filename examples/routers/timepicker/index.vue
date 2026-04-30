@@ -29,16 +29,16 @@
 </template>
 
 <script>
-import Container from '../../common/container'
-import CodeShow from '../../common/code-show'
-import DemoBasic from './demo/basic'
-import DemoValue from './demo/value'
-import DemoSize from './demo/size'
-import DemoDisabled from './demo/disabled'
-import DemoDisableOptions from './demo/disable-options'
-import DemoAddon from './demo/addon'
-import DemoHideColumn from './demo/hide-column'
-import Demo12Hours from './demo/12hours'
+import Container from '../../common/container.vue'
+import CodeShow from '../../common/code-show.vue'
+import DemoBasic from './demo/basic.vue'
+import DemoValue from './demo/value.vue'
+import DemoSize from './demo/size.vue'
+import DemoDisabled from './demo/disabled.vue'
+import DemoDisableOptions from './demo/disable-options.vue'
+import DemoAddon from './demo/addon.vue'
+import DemoHideColumn from './demo/hide-column.vue'
+import Demo12Hours from './demo/12hours.vue'
 
 // import moment from 'moment'
 

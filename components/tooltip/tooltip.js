@@ -1,4 +1,4 @@
-import TooltipMixin from '../_mixin/tooltip'
+import TooltipMixin from '../_mixin/tooltip.jsx'
 
 export default {
   name: 'tooltip',

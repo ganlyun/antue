@@ -57,19 +57,19 @@
 </template>
 
 <script>
-import Container from '../../common/container'
-import CodeShow from '../../common/code-show'
+import Container from '../../common/container.vue'
+import CodeShow from '../../common/code-show.vue'
 import ARow from '@/row'
 import ACol from '@/col'
-import DemoBasic from './demo/basic'
-import DemoGutter from './demo/gutter'
-import DemoOffset from './demo/offset'
-import DemoSort from './demo/sort'
-import DemoFlex from './demo/flex'
-import DemoAlign from './demo/flex-align'
-import DemoOrder from './demo/flex-order'
-import DemoReponsive from './demo/reponsive'
-import DemoReponsiveMore from './demo/reponsive-more'
+import DemoBasic from './demo/basic.vue'
+import DemoGutter from './demo/gutter.vue'
+import DemoOffset from './demo/offset.vue'
+import DemoSort from './demo/sort.vue'
+import DemoFlex from './demo/flex.vue'
+import DemoAlign from './demo/flex-align.vue'
+import DemoOrder from './demo/flex-order.vue'
+import DemoReponsive from './demo/reponsive.vue'
+import DemoReponsiveMore from './demo/reponsive-more.vue'
 
 export default {
   components: {

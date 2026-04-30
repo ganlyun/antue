@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import Container from '../../common/container'
-import CodeShow from '../../common/code-show'
-import DemoBasic from './demo/basic'
-import DemoPlacement from './demo/placement'
+import Container from '../../common/container.vue'
+import CodeShow from '../../common/code-show.vue'
+import DemoBasic from './demo/basic.vue'
+import DemoPlacement from './demo/placement.vue'
 
 export default {
   components: {

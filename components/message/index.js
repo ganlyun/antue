@@ -1,10 +1,8 @@
-import Vue from 'vue'
+import { createApp, h } from 'vue'
 import './style/index.js'
-import MessageBox from './message-box'
-import Message from './message'
+import MessageBox from './message-box.vue'
+import Message from './message.vue'
 
-const MessageBoxConstructor = Vue.extend(MessageBox)
-const MessageConstructor = Vue.extend(Message)
 let boxInstance
 let boxEl
 let messageInstances = []
@@ -15,57 +13,82 @@ let defaultDuration = 3
 let getContainer
 
 const getBoxEl = () => {
-  boxInstance = boxInstance || new MessageBoxConstructor({
-    propsData: {
-      prefixCls,
-      styles: { top: `${defaultTop}px` }
+  if (!boxInstance) {
+    const container = document.createElement('div')
+    boxInstance = createApp({
+      render() {
+        return h(MessageBox, {
+          prefixCls,
+          styles: { top: `${defaultTop}px` }
+        })
+      }
+    })
+    boxEl = container
+    if (getContainer) {
+      getContainer().appendChild(container)
+    } else {
+      document.body.appendChild(container)
     }
-  })
-  boxInstance.vm = boxInstance.$mount()
-  boxEl = boxInstance.vm.$el
-  if (getContainer) {
-    getContainer().appendChild(boxInstance.vm.$el)
-  } else {
-    document.body.appendChild(boxInstance.vm.$el)
+    boxInstance.mount(container)
   }
   return boxEl
 }
 
 const notice = (content, duration, type, onClose) => {
-  const boxEl = getBoxEl()
-  const options = {
-    prefixCls,
-    content: content,
-    duration: duration,
-    type: type,
-    onClose: () => {
-      close(id, onClose)
-    }
-  }
+  const container = getBoxEl()
   const id = `${prefixCls}${seed++}`
-  let messageInstance = new MessageConstructor({
-    propsData: options
+  
+  const messageWrapper = document.createElement('div')
+  container.appendChild(messageWrapper)
+
+  const instance = createApp({
+    render() {
+      return h(Message, {
+        prefixCls,
+        content,
+        duration,
+        type,
+        visible: true,
+        onClose: () => {
+          close(id, onClose)
+        }
+      })
+    }
   })
-  messageInstance.id = id
-  messageInstance.vm = messageInstance.$mount()
-  boxEl.appendChild(messageInstance.vm.$el)
-  messageInstance.vm.visible = true
+
+  const vm = instance.mount(messageWrapper)
+  
+  const messageInstance = {
+    id,
+    vm,
+    instance
+  }
+  
   messageInstances.push(messageInstance)
 
   return () => {
-    messageInstance.vm.visible = false
+    // Trigger close via prop update or direct method if exposed
+    // For simplicity in this migration, we rely on the component's internal logic or re-render
+    // Ideally, we'd pass a reactive ref for 'visible'
+    close(id, onClose)
   }
 }
 
 const close = (id, userOnClose) => {
-  for (let i = 0, len = messageInstances.length; i < len; i++) {
-    if (id === messageInstances[i].id) {
-      if (typeof userOnClose === 'function') {
-        userOnClose(messageInstances[i])
-      }
-      messageInstances.splice(i, 1)
-      break
+  const index = messageInstances.findIndex(inst => inst.id === id)
+  if (index > -1) {
+    const instance = messageInstances[index]
+    if (typeof userOnClose === 'function') {
+      userOnClose(instance)
     }
+    
+    // Unmount and remove from DOM
+    instance.instance.unmount()
+    if (instance.vm.$el && instance.vm.$el.parentNode) {
+      instance.vm.$el.parentNode.removeChild(instance.vm.$el)
+    }
+    
+    messageInstances.splice(index, 1)
   }
 }
 
@@ -91,7 +114,7 @@ const message = {
   config (options) {
     if (options.top !== undefined) {
       defaultTop = options.top
-      boxInstance = null
+      boxInstance = null // Reset to recreate with new top
     }
     if (options.duration !== undefined) {
       defaultDuration = options.duration
@@ -105,11 +128,20 @@ const message = {
   },
   destroy () {
     if (boxInstance) {
-      boxInstance.vm.$destroy(true)
-      boxEl.parentNode.removeChild(boxEl)
+      boxInstance.unmount()
+      if (boxEl && boxEl.parentNode) {
+        boxEl.parentNode.removeChild(boxEl)
+      }
     }
     boxInstance = null
+    boxEl = null
+    messageInstances = []
   }
 }
 
-export default message
+export default {
+  install: (app) => {
+    app.config.globalProperties.$message = message
+    app.provide('$message', message)
+  }
+}

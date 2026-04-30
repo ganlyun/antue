@@ -1,4 +1,4 @@
 import './style/index.js'
-import Calendar from './calendar'
+import Calendar from './calendar.vue'
 
 export default Calendar

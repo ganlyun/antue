@@ -23,14 +23,14 @@
 </template>
 
 <script>
-import Container from '../../common/container'
-import CodeShow from '../../common/code-show'
-import DemoBasic from './demo/basic'
-import DemoButton from './demo/dropdown-button'
-import DemoPlacement from './demo/placement'
-import DemoTrigger from './demo/trigger'
-import DemoEvent from './demo/event'
-import DemoSubmenu from './demo/sub-menu'
+import Container from '../../common/container.vue'
+import CodeShow from '../../common/code-show.vue'
+import DemoBasic from './demo/basic.vue'
+import DemoButton from './demo/dropdown-button.vue'
+import DemoPlacement from './demo/placement.vue'
+import DemoTrigger from './demo/trigger.vue'
+import DemoEvent from './demo/event.vue'
+import DemoSubmenu from './demo/sub-menu.vue'
 
 export default {
   components: {

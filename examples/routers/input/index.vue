@@ -36,12 +36,12 @@
 </template>
 
 <script>
-  import Container from '../../common/container'
-  import CodeShow from '../../common/code-show'
+  import Container from '../../common/container.vue'
+  import CodeShow from '../../common/code-show.vue'
   import ARow from '@/row'
   import ACol from '@/col'
-  import BaseDemo from './demo/base'
-  import SizeDemo from './demo/size'
+  import BaseDemo from './demo/base.vue'
+  import SizeDemo from './demo/size.vue'
   import PrefixDemo from './demo/prefix.vue'
   import AddonDemo from './demo/addon.vue'
   import SearchDemo from './demo/search.vue'

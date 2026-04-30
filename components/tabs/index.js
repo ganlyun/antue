@@ -1,6 +1,6 @@
 import './style/index.js'
-import Tabs from './tabs'
-import Pane from './pane'
+import Tabs from './tabs.vue'
+import Pane from './pane.vue'
 
 Tabs.Pane = Pane
 

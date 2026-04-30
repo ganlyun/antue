@@ -1,7 +1,8 @@
 <script>
+import { h } from 'vue'
 import { oneOf } from '../_util/proptype'
-import TabsBar from './tabs-bar'
-import TabsContent from './tabs-content'
+import TabsBar from './tabs-bar.vue'
+import TabsContent from './tabs-content.vue'
 
 export default {
   name: 'tabs',
@@ -113,34 +114,26 @@ export default {
   mounted () {
     this.getPanes()
   },
-  render (h) {
+  render () {
     const bar = h('tabs-bar', {
-      props: {
-        active: this.active,
-        animated: this.animated,
-        hideAdd: this.hideAdd,
-        position: this.position,
-        size: this.size,
-        tabs: this.tabs,
-        type: this.type
-      },
-      on: {
-        edit: this.handleEdit
-      }
-    }, [
+      active: this.active,
+      animated: this.animated,
+      hideAdd: this.hideAdd,
+      position: this.position,
+      size: this.size,
+      tabs: this.tabs,
+      type: this.type,
+      onEdit: this.handleEdit
+    }, () => [
       this.$slots.extra
     ])
 
     const content = h('tabs-content', {
       ref: 'content',
-      props: {
-        animated: this.animated,
-        activeIndex: this.activeIndex
-      },
-      on: {
-        contentUpdate: this.getPanes
-      }
-    }, [
+      animated: this.animated,
+      activeIndex: this.activeIndex,
+      onContentUpdate: this.getPanes
+    }, () => [
       this.$slots.default
     ])
 

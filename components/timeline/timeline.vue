@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import TimelineItem from './timeline-item'
+import TimelineItem from './timeline-item.vue'
 
 export default {
   name: 'timeline',

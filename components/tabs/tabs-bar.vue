@@ -16,7 +16,7 @@
 
 <script>
 import AtuIcon from '../icon'
-import TabsNav from './tabs-nav'
+import TabsNav from './tabs-nav.vue'
 
 export default {
   name: 'tabsBar',

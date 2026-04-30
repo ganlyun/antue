@@ -1,4 +1,4 @@
 import './style/index.js'
-import Upload from './upload'
+import Upload from './upload.vue'
 
 export default Upload

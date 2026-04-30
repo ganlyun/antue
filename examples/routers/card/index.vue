@@ -51,14 +51,14 @@
 </template>
 
 <script>
-  import Container from '../../common/container'
-  import CodeShow from '../../common/code-show'
+  import Container from '../../common/container.vue'
+  import CodeShow from '../../common/code-show.vue'
   import ARow from '@/row'
   import ACol from '@/col'
-  import BaseDemo from './demo/base'
-  import ImageDemo from './demo/image'
-  import GridDemo from './demo/grids'
-  import NetDemo from './demo/net'
+  import BaseDemo from './demo/base.vue'
+  import ImageDemo from './demo/image.vue'
+  import GridDemo from './demo/grids.vue'
+  import NetDemo from './demo/net.vue'
   export default {
     components: {
       Container,

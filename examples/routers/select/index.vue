@@ -31,14 +31,14 @@
 </template>
 
 <script>
-  import Container from '../../common/container'
-  import CodeShow from '../../common/code-show'
+  import Container from '../../common/container.vue'
+  import CodeShow from '../../common/code-show.vue'
   import ARow from '@/row'
   import ACol from '@/col'
-  import DemoBasic from './demo/basic'
-  import DemoSearch from './demo/search'
-  import DemoMultiple from './demo/multiple'
-  import DemoSize from './demo/size'
+  import DemoBasic from './demo/basic.vue'
+  import DemoSearch from './demo/search.vue'
+  import DemoMultiple from './demo/multiple.vue'
+  import DemoSize from './demo/size.vue'
 
   export default {
     components: {
