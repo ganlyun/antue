@@ -8,7 +8,8 @@
     "dev": "vite --config vite.config.examples.js",
     "site": "vite --config vite.config.site.js",
     "test": "jest",
-    "lint": "eslint components",
+    "lint": "eslint components/**/*.vue components/**/*.js components/**/*.jsx",
+    "lint:fix": "eslint components/**/*.vue components/**/*.js components/**/*.jsx --fix",
     "build:examples": "vite build --config vite.config.examples.js",
     "build:site": "vite build --config vite.config.site.js",
     "build": "vite build --config vite.config.lib.js"
@@ -38,6 +39,8 @@
     "@vitejs/plugin-vue": "^6.0.0",
     "@vitejs/plugin-vue-jsx": "^5.1.5",
     "autoprefixer": "^10.5.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-vue": "^9.0.0",
     "less": "^4.2.0",
     "postcss": "^8.5.12",
     "vite": "^8.0.0",

@@ -34,6 +34,20 @@ pnpm dev
 
 The application will be available at `http://localhost:8080/`
 
+## 🔍 Code Quality
+
+Lint code for errors and warnings:
+
+```bash
+pnpm lint
+```
+
+Auto-fix linting issues:
+
+```bash
+pnpm lint:fix
+```
+
 ## 🏗️ Build
 
 Build for production:
