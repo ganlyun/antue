@@ -1,9 +1,9 @@
-<p align="center"><a href="https://zzuu666.github.io/antue" target="_blank"><img src="./icon.svg" height="120"></a></p>
+<p align="center"><a href="https://ganlyun.github.io/antue" target="_blank"><img src="./icon.svg" height="120"></a></p>
 
 
 <p align="center">
-  <a href="https://github.com/zzuu666/antue/actions/workflows/ci.yml"><img src="https://github.com/zzuu666/antue/actions/workflows/ci.yml/badge.svg?branch=master" alt="CI"></a>
-  <a href="https://codecov.io/gh/zzuu666/antue"><img src="https://codecov.io/gh/zzuu666/antue/branch/master/graph/badge.svg" alt="Codecov" /></a>
+  <a href="https://github.com/ganlyun/antue/actions/workflows/ci.yml"><img src="https://github.com/ganlyun/antue/actions/workflows/ci.yml/badge.svg?branch=master" alt="CI"></a>
+  <a href="https://codecov.io/gh/ganlyun/antue"><img src="https://codecov.io/gh/ganlyun/antue/branch/master/graph/badge.svg" alt="Codecov" /></a>
   <a href="https://badge.fury.io/js/antue"><img src="https://badge.fury.io/js/antue.svg" alt="npm version" height="18"></a>
 </p>
 
@@ -123,7 +123,7 @@ MIT License
 
 ## 👥 Join Us
 
-We welcome you to join in the development of Antue. Visit our [documentation site](https://zzuu666.github.io/antue/) to get started.
+We welcome you to join in the development of Antue. Visit our [documentation site](https://ganlyun.github.io/antue/) to get started.
 
 ---
 

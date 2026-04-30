@@ -21,17 +21,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/zzuu666/antue"
+    "url": "https://github.com/ganlyun/antue"
   },
   "bugs": {
-    "url": "https://github.com/zzuu666/antue/issues"
+    "url": "https://github.com/ganlyun/antue/issues"
   },
   "keywords": [
     "vue",
     "ant-design",
     "antue"
   ],
-  "author": "zzuu666",
+  "author": "ganlyun <617621777@qq.com>",
   "license": "MIT",
   "packageManager": "pnpm@8.15.4",
   "engines": {
