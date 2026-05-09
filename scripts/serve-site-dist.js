@@ -20,7 +20,10 @@ const mime = {
 }
 
 const safeJoin = (base, requestPath) => {
-  const safePath = path.normalize(requestPath).replace(/^(\.\.(\/|\\|$))+/, '')
+  const safePath = path
+    .normalize(requestPath)
+    .replace(/^(\.\.(\/|\\|$))+/, '')
+    .replace(/^[/\\]+/, '')
   return path.join(base, safePath)
 }
 
@@ -64,4 +67,3 @@ http
   .listen(port, host, () => {
     process.stdout.write(`Site dist server: http://localhost:${port}/\n`)
   })
-
